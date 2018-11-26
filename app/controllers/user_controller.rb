@@ -5,6 +5,11 @@ class UserController < ApplicationController
     @user = User.new(allowed_params)
     # redirect_to user_index_path
   end
+  def create
+    @user = User.new(allowed_params)
+    @user.save
+    redirect_to user_index
+  end
 
 
   private

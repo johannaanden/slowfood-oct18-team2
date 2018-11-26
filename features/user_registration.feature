@@ -10,5 +10,5 @@ Scenario: User registration [Happy path]
     And I fill in "Password" with "password123"
     And I fill in "Confirmation" with "password123"
     And I click "Create account"
-    Then I am on "landing" page
+    Then I am on landing page
     And I see "User succesfully created" alert
