@@ -9,6 +9,7 @@ class UserController < ApplicationController
     @user = User.new(allowed_params)
     @user.save
     redirect_to user_index
+    flash[:notice] = "User succesfully created"
   end
 
 
