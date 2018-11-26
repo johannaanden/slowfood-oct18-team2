@@ -4,11 +4,15 @@ Feature: User can see menu
     I would like to be able to see a menu
 
     Background:
-    | starter | main  | dessert   |
-    | salad   | pizza | ice cream |
+        Given the following products exists
+            | name            | description                      | price |
+            | pasta alfredo   | pasta with some delicious        | 100   |
+            | pasta carbonara | pasta with some delicious cheese | 102   |
+            | pizza           | hawaiian pizza                   | 105   |
+            | lasagna         | meat lasagna                     | 110   |
 
     Scenario: When I enter the site I should see a menu
         Given I visit the site
-        Then I should see 'salad'
-        And I should see 'pizza'
-        And I should see 'ice cream'
+        Then I should see 'pasta alfredo'
+        And I should see 'pasta with some delicious'
+        And I should see '100'
