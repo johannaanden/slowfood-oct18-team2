@@ -3,8 +3,8 @@ Given("I am on user registration page") do
     
 end
   
-Given("I fill in {string} with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+Given("I fill in {string} with {string}") do |field, value|
+    fill_in field, with: value
 end
   
 Given("I click {string}") do |string|
