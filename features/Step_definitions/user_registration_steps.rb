@@ -11,7 +11,7 @@ Given("I click {string}") do |element|
 end
   
 Then("I am on landing page") do
-    visit user_index_path
+    visit root_path
 end
   
 Then("I see {string} alert") do |content|
