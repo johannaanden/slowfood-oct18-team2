@@ -9,6 +9,6 @@ Scenario: User registration [Happy path]
     And I fill in "Email" with "johanna@gmail.com"
     And I fill in "Password" with "password123"
     And I fill in "Password confirmation" with "password123"
-    And I click "Create account"
+    And I click "Sign up"
     Then I am on landing page
     And I see "User succesfully created" alert
