@@ -1,5 +1,5 @@
 Given("I am on user registration page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit new_user_registration_path
 end
   
 Given("I fill in {string} with {string}") do |string, string2|
