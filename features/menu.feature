@@ -7,8 +7,8 @@ Feature: User can see menu
         Given the following products exists
             | name            | description                            | price |
             | green salad     | fresh lettuce, tomato and cheese       | 50    |
-           
-            
+            | pizza           | cheese, pinapple and ham               | 100   |
+             
 
     Scenario: When I enter the site I should see a menu
         Given I visit the site
