@@ -1,5 +1,5 @@
 Given("I am on user registration page") do
-    visit new_user_path
+    visit new_user_registration_path
 end
   
 Given("I fill in {string} with {string}") do |field, value|
