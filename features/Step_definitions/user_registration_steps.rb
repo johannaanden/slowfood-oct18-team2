@@ -11,9 +11,13 @@ Given("I click {string}") do |element|
 end
   
 Then("I am on landing page") do
-    visit root_path
+    expect(current_path).to eq root_path
+end
+
+Then("I am on users page") do
+    expect(current_path).to eq users_path
 end
   
-Then("I see {string} alert") do |string|
-    page.has_css?('.alert',text: string)
+Then("I see {string} alert") do |content|
+    expect(page).to have_content content
 end
