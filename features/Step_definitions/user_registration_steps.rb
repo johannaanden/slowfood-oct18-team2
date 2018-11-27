@@ -15,5 +15,5 @@ Then("I am on landing page") do
 end
   
 Then("I see {string} alert") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    page.has_css?('.alert',text: string)
 end
