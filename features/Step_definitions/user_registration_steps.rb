@@ -15,7 +15,8 @@ Then("I am on landing page") do
 end
 
 Then("I am on users page") do
-    expect(current_path).to eq users_path
+    # binding.pry
+    expect(current_path).to eq user_registration_path
 end
   
 Then("I see {string} alert") do |content|
