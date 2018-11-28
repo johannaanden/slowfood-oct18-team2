@@ -11,4 +11,9 @@ RSpec.describe User, type: :model do
       expect(FactoryBot.create(:user)).to be_valid 
     end
   end
+
+  describe 'Validations' do
+    it { is_expected.to validate_presence_of :email }
+    it { is_expected.to validate_presence_of :encrypted_password } 
+  end
 end
