@@ -11,6 +11,6 @@ Feature: User can see menu
 
     Scenario: When I enter the site I should see a menu
         Given I visit the site
-        Then I should see 'green salad'
-        And I should see 'fresh lettuce, tomato and cheese'
-        And I should see '50'
+        Then I see 'green salad'
+        And I see 'fresh lettuce, tomato and cheese'
+        And I see '50'
