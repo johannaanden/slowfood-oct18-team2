@@ -14,4 +14,4 @@ Feature: User can log in and out
         When I fill in 'Email' with 'Don@trump.com'
         And I fill in 'Password' with 'maga2020'
         And I click 'Log in'
-        Then I see 'Welcome!'
+        Then I see 'Signed in successfully.'
