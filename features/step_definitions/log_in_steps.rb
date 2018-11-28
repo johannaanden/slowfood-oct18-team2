@@ -7,7 +7,7 @@ end
 
 
 Given("I visit login page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit new_user_session_path
 end
 
 When("I fill in {string} field with {string}") do |string, string2|
