@@ -15,3 +15,7 @@ Feature: User can log in and out
         And I fill in 'Password' with 'maga2020'
         And I click 'Log in'
         Then I see 'Signed in successfully.'
+
+    Scenario: User fills in the login form incorrectly [Sad-path]
+        When I click 'Log in'
+        Then I see 'Invalid Email or password.'
