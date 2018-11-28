@@ -4,6 +4,7 @@ end
   
 Then("I see {string}") do |content|
     expect(page).to have_content content
+    
 end
 
 Then("I am on landing page") do
