@@ -10,10 +10,4 @@ Given("I visit login page") do
     visit new_user_session_path
 end
 
-When("I fill in {string} field with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
-end
 
-Then("I should see {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-end

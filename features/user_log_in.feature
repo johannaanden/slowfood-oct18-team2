@@ -11,7 +11,7 @@ Feature: User can log in and out
         And I visit login page
 
     Scenario: User can log in [Happy-path]
-        When I fill in 'email' field with 'Don@trump.com'
-        And I fill in 'password' field with 'maga2020'
+        When I fill in 'Email' with 'Don@trump.com'
+        And I fill in 'Password' with 'maga2020'
         And I click 'Log in'
-        Then I should see 'Welcome!'
+        Then I see 'Welcome!'
