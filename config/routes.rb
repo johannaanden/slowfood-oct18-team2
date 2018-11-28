@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-    resources :products, only: [:index]
 
-    root controller: :products, action: :index
+  devise_for :users
+
+  resources :products, only: [:index]
+
+  root controller: :products, action: :index
+
 end

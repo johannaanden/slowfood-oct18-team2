@@ -9,4 +9,8 @@
     %link{:href => "https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css", :rel => "stylesheet"}/
   %body
     = render partial: 'nav'
+    - if notice
+      %p.alert.alert-success= notice
+    - if alert
+      %p.alert.alert-danger= alert
     = yield
