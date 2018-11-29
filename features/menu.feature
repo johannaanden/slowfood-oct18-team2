@@ -4,11 +4,17 @@ Feature: User can see menu
     I would like to be able to see a menu
 
     Background:
-        Given the following products exists
-            | name            | description                            | price | category |
-            | green salad     | fresh lettuce, tomato and cheese       | 50    | starter  |
-            | pizza           | cheese, pinapple and ham               | 100   | main     |
-            | ice cream       | strawberry                             | 50    | dessert  |
+        Given the following categories exist
+            | category |
+            | Main     |
+            | Dessert  |
+            | Starter  | 
+
+        And the following products exists
+            | name            | description                            | price | category|
+            | green salad     | fresh lettuce, tomato and cheese       | 50    | Starter |
+            | pizza           | cheese, pinapple and ham               | 100   | Main     |
+            | ice cream       | strawberry                             | 50    | Dessert  |
 
     Scenario: When I enter the site I should see a menu
         Given I visit the site
