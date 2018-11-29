@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
-
+gem 'cartify', github: 'CraftAcademy/cartify', branch: 'rails_5_2'
 gem 'rails', '~> 5.2.0'
 gem "haml-rails", "~> 1.0"
 gem 'pg', '>= 0.18', '< 2.0'
