@@ -3,6 +3,10 @@ Feature: User can see menu
     In order to get an overview of the restaurants products
     I would like to be able to see a menu
 
+    As a visitor,
+    In order to navigate the products
+    I would like to see the products sorted in categories
+
     Background:
         Given the following categories exist
             | category |
@@ -21,6 +25,7 @@ Feature: User can see menu
         Then I see 'green salad'
         And I see 'fresh lettuce, tomato and cheese'
         And I see '50'
+        And I see 'Starter'
     
     Scenario: User can navigate the products
         Given I am on the landing page
