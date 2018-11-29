@@ -25,6 +25,7 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'devise'
+  gem 'launchy'
 end
 
 group :development do
