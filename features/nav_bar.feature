@@ -8,5 +8,3 @@ Feature: User can navigate the site
         Then I should see the logo
         And I should see 'Check out'
         And I should see 'Order total:'
-        And I should see 'Login'
-        And I should see 'Sign up'
