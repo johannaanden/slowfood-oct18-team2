@@ -9,6 +9,7 @@ Given("I visit login page") do
 end
 
 When("I have logged in") do
+    user.owner = true
     steps %{
         Given I visit login page 
         And I fill in "Email" with 'Don@trump.com'
@@ -16,4 +17,3 @@ When("I have logged in") do
         And I click 'Log in'
     }
   end
-  
