@@ -15,4 +15,4 @@ Feature: Visitor can add to order
         And I fill in 'Email' with 'Don@trump.com'
         And I fill in 'Password' with 'maga2020'
         And I click 'Login'
-        Then I should see 'Quantity: 0'
+        Then I should see '0 items'
