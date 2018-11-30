@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+        :recoverable, :rememberable, :validatable
 
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } , presence: true
   validates_uniqueness_of :email

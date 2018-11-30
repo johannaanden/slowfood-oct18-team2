@@ -5,14 +5,25 @@ Feature: Visitor can add to order
     I would like to be able to add products to an order
 
     Background:
+    Given the following user exists
         | email          | password  | password_confirmation |
         | Don@trump.com  | maga2020  | maga2020              |
 
+      Given the following categories exist
+        | category |
+        | Main     |
+        | Dessert  |
+        | Starter  | 
+
+    And the following products exists
+        | name            | description                            | price | category |
+        | pizza           | cheese, pinapple and ham               | 100   | Main     |
+    And I have logged in
+
     Scenario: User adds a product
-        Given I visit the site
-        Then show me the page
-        And I click 'Login'
-        And I fill in 'Email' with 'Don@trump.com'
-        And I fill in 'Password' with 'maga2020'
-        And I click 'Login'
-        Then I should see '0 items'
+        And show me the page
+        Then I should see 'pizza'
+        And I should see '100'
+        And show me the page
+        And I click 'Add to Cart'
+
