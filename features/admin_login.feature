@@ -5,16 +5,24 @@ Feature: Admin Log in
     I would like to be able to log in to the system as a restaurant owner
 
     Background: Owner exists already
+        Given the following categories exist
+            | category |
+            | Main     |
+            | Dessert  |
+            | Starter  | 
+
+        And the following products exists
+            | name            | description                            | price | category|
+            | green salad     | fresh lettuce, tomato and cheese       | 50    | Starter |
+            | pizza           | cheese, pinapple and ham               | 100   | Main     |
+            | ice cream       | strawberry                             | 50    | Dessert  |
     
-        Given the following user exists
-        | email              | password  | password_confirmation |
-        | odin@norsegod.com  | oneeye111 | oneeye111             |
+        And the following user exists
+            | email              | password  | password_confirmation | owner |
+            | odin@norsegod.com  | oneeye111 | oneeye111             | true  |
         
         And I visit login page
 
     Scenario: Owner can log in to the system
         When owner has logged in
-        Then I see "Today's Menu"
-        And I see "Starter"
-        And I see "Main"
-        And I see "Dessert"
+        Then I see "Welcome owner!"
