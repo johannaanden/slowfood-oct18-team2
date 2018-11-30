@@ -25,11 +25,8 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'devise'
-<<<<<<< HEAD
   gem 'launchy'
-=======
   gem 'faker'
->>>>>>> 228f3ccb0d15d394ce0b1784d9d4ac8d533ef5e2
 end
 
 group :development do
