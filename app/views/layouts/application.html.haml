@@ -4,12 +4,17 @@
     %meta{content: 'text/html; charset=UTF-8', http: {equiv: "Content-Type"}}/
     %title Boilerplate
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', data: {'turbolinks-track' => 'reload'}
-    = javascript_include_tag 'application', data: {'turbolinks-track' => 'reload'}
+    = stylesheet_link_tag    'application', media: 'all', data: {'turbolinks-track': 'reload'}
+    = javascript_include_tag 'application', data: {'turbolinks-track': 'reload'}
+    %link{ href: "https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css", rel: "stylesheet"}/
   %body
+<<<<<<< HEAD
     #notifications
       = alert 
       = notice
+=======
+    = render partial: 'partials/nav'
+>>>>>>> 62dc54648e6011c0d6161cec86822c9925aa0487
     - if notice
       %p.alert.alert-success= notice
     - if alert
