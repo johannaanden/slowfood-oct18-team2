@@ -4,4 +4,5 @@
   %p= product.price
   = link_to "Add to order", cartify.order_items_path(order_item: {quantity: 1, product_id: product.id}), { method: :post, remote: true }
 
- 
+%span.shop-icon
+  %span#order-details.shop-quantity 1 item
