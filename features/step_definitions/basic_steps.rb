@@ -5,7 +5,6 @@ end
 Given('the following products exists') do |table|
     table.hashes.each do |product|
         category = Category.find_by(category: product[:category])
-        # binding.pry
         product.except!('category_id')
         FactoryBot.create(:product, product.merge(category: category))
     end

@@ -33,11 +33,8 @@ Feature: User can see menu
         And I see 'Starter'
     
     Scenario: User can navigate the products
-        And I click "Login"
-        When I fill in 'Email' with 'Don@trump.com'
-        And I fill in 'Password' with 'maga2020'
-        And I click 'Log in'
-        Then I am on landing page
+        When I click "Login"
+        And I have logged in
         Then I see "Today's Menu"
         And I see "Starter"
         And I see "Main"
