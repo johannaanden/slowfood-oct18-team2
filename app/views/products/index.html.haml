@@ -1,7 +1,8 @@
-- if current_user.owner
-  %h1 Welcome owner!
-- else
-  %h1 Today's Menu
+- if user_signed_in?  
+  - if current_user.owner
+    %h1 Welcome owner!
+  - else
+    %h1 Today's Menu
 
 - @categories.each do |category|
   %p= category.category

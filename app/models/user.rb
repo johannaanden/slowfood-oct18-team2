@@ -7,6 +7,4 @@ class User < ApplicationRecord
 
   validates :encrypted_password, presence: true
 
-  validates :owner, presence: true
-
 end
