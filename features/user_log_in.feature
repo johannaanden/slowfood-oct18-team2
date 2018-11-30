@@ -4,6 +4,10 @@ Feature: User can log in and out
     in order to access my account
     I would like to be able to log in
 
+    As a visitor,
+    In order to navigate the products
+    I would like to see the products sorted in categories
+
     Background: 
         Given the following user exists
         | email          | password  | password_confirmation |
