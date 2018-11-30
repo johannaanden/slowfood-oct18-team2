@@ -1,8 +1,11 @@
-- @products.each do |product| 
-  %p= product.name
-  %p= product.description
-  %p= product.price
-  = link_to "Add to order", cartify.order_items_path(order_item: {quantity: 1, product_id: product.id}), { method: :post, remote: true }
+%h1 Today's Menu
 
 %span.shop-icon
   %span#order-details.shop-quantity 1 item
+- @categories.each do |category|
+  %p= category.category
+  %div{id: dom_id(category)}
+    - category.products.each do |product|
+      %p= product.name
+      %p= product.description
+      %p= product.price

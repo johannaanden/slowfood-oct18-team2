@@ -4,7 +4,15 @@ end
 
 Given('the following products exists') do |table|
     table.hashes.each do |product|
-        FactoryBot.create(:product, product)
+        category = Category.find_by(category: product[:category])
+        product.except!('category_id')
+        FactoryBot.create(:product, product.merge(category: category))
+    end
+end
+
+Given("the following categories exist") do |table|
+    table.hashes.each do |category|
+      Category.create!(category)
     end
 end
 
