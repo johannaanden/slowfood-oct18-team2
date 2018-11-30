@@ -16,4 +16,3 @@ When("I have logged in") do
         And I click 'Log in'
     }
   end
-  
