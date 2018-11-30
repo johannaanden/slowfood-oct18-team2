@@ -33,8 +33,7 @@ Feature: User can see menu
         And I see 'Starter'
     
     Scenario: User can navigate the products
-        When I click "Login"
-        And I have logged in
+        When I have logged in
         Then I see "Today's Menu"
         And I see "Starter"
         And I see "Main"
