@@ -1,7 +1,5 @@
 %h1 Today's Menu
 
-%span.shop-icon
-  %span#order-details.shop-quantity
 - @categories.each do |category|
   %p= category.category
   %div{id: dom_id(category)}
@@ -10,5 +8,3 @@
       %p= product.description
       %p= product.price
       = add_to_cart(product, 1, 'Add to Cart') if user_signed_in?
-
-      -# = link_to cartify.order_items_path(order_item: {quantity: 1, product_id: product.id}), { method: :post, remote: true }

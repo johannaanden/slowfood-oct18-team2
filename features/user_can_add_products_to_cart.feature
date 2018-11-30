@@ -1,3 +1,5 @@
+@javascript
+
 Feature: Visitor can add to order 
 
     As a visitor,
@@ -9,21 +11,20 @@ Feature: Visitor can add to order
         | email          | password  | password_confirmation |
         | Don@trump.com  | maga2020  | maga2020              |
 
-      Given the following categories exist
+    Given the following categories exist
         | category |
         | Main     |
         | Dessert  |
         | Starter  | 
 
     And the following products exists
-        | name            | description                            | price | category |
-        | pizza           | cheese, pinapple and ham               | 100   | Main     |
+        | name            | description               | price | category |
+        | pizza           | cheese, pinapple and ham  | 100   | Main     |
+    
     And I have logged in
 
     Scenario: User adds a product
-        And show me the page
         Then I should see 'pizza'
         And I should see '100'
-        And show me the page
         And I click 'Add to Cart'
-
+        Then I should see '1 item'
