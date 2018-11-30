@@ -17,14 +17,14 @@ Given("the following categories exist") do |table|
     end
 end
 
-Given("I am on user registration page") do
+Given('I am on user registration page') do
     visit new_user_registration_path
 end
-  
-Given("I fill in {string} with {string}") do |element, value|
+
+Given('I fill in {string} with {string}') do |element, value|
     fill_in element, with: value
 end
-  
-Given("I click {string}") do |element|
+
+Given('I click {string}') do |element|
     click_on element
 end
