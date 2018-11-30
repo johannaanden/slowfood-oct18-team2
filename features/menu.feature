@@ -19,6 +19,10 @@ Feature: User can see menu
             | green salad     | fresh lettuce, tomato and cheese       | 50    | Starter |
             | pizza           | cheese, pinapple and ham               | 100   | Main     |
             | ice cream       | strawberry                             | 50    | Dessert  |
+
+        And the following user exists
+            | email          | password  | password_confirmation |
+            | Don@trump.com  | maga2020  | maga2020              |
         
         And I visit the site
 
