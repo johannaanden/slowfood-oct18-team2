@@ -27,6 +27,7 @@ group :development, :test do
   gem 'devise'
   gem 'launchy'
   gem 'faker'
+  gem 'mini_racer'
 end
 
 group :development do
