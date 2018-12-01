@@ -2,8 +2,7 @@
   - if current_user.owner
     %h1 Welcome owner!  
   - else
-    %h2 Welcome!
-    - current_user.email
+    %h2== Welcome #{current_user.email}!
 
 = render partial: 'partials/menu'
 
