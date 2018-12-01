@@ -16,8 +16,8 @@ Feature: Admin Log in
             | Starter  | 
 
         And the following products exists
-            | name            | description                            | price | category|
-            | green salad     | fresh lettuce, tomato and cheese       | 50    | Starter |
+            | name            | description                            | price | category |
+            | green salad     | fresh lettuce, tomato and cheese       | 50    | Starter  |
             | pizza           | cheese, pinapple and ham               | 100   | Main     |
             | ice cream       | strawberry                             | 50    | Dessert  |
     
@@ -34,7 +34,7 @@ Feature: Admin Log in
     Scenario: Owner can uppdate update menu
         When owner has logged in
         And I see "Welcome owner!"
-        And I click "Edit menu"
+        And I click "Edit Starter"
         And I fill in "Starter name" with "Tomato salad"
         And I fill in "Starter description" with "Tomato and cheese"
         And I click "Update menu"
