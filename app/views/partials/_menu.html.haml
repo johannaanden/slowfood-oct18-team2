@@ -9,3 +9,5 @@
         - if user_signed_in?  
             - if current_user.owner
                 = link_to "Edit #{category.category}", edit_product_path(product.id)
+            - else
+                = add_to_cart(product, 1, 'Add to Cart')  

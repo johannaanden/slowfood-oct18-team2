@@ -17,3 +17,7 @@ end
 Then('I should see {string}') do |word|
     expect(page).to have_content word
 end
+
+Then('show me the page') do
+    save_and_open_page
+end
