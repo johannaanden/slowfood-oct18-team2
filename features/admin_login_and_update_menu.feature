@@ -35,8 +35,10 @@ Feature: Admin Log in
         When owner has logged in
         And I see "Welcome owner!"
         And I click "Edit Starter"
-        And I fill in "Starter name" with "Tomato salad"
-        And I fill in "Starter description" with "Tomato and cheese"
-        And I click "Update menu"
+        And I fill in "product[name]" with "Tomato salad"
+        And I fill in "product[description]" with "Tomato and cheese"
+        And I fill in "product[price]" with "75"
+        And I click "Update product"
         Then I see "Tomato salad"
         And I see "Tomato and cheese"
+        And I see "75"

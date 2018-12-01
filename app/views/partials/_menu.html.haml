@@ -6,6 +6,6 @@
         %h4= product.name
         %p= product.description
         %p= product.price
-    - if user_signed_in?  
-        - if current_user.owner
-            = link_to "Edit #{category.category}"
+        - if user_signed_in?  
+            - if current_user.owner
+                = link_to "Edit #{category.category}", edit_product_path(product.id)
