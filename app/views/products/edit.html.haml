@@ -1,8 +1,8 @@
 = form_with model: @product do |form|
-  %p= form.label :Name
+  %p= form.label :name
   = form.text_field :name
-  %p= form.label :Description
+  %p= form.label :description
   = form.text_area :description
-  %p= form.label :Price
+  %p= form.label :price
   = form.text_field :price
   %p= form.submit "Update product "
