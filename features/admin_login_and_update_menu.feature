@@ -28,17 +28,16 @@ Feature: Admin Log in
         And I visit login page
 
     Scenario: Owner can log in to the system
-        When owner has logged in
+        When I have logged in as owner
         Then I see "Welcome owner!"
 
     Scenario: Owner can uppdate update menu
-        When owner has logged in
-        And I see "Welcome owner!"
-        And I click "Edit Starter"
+        Given I have logged in as owner
+        When I click on "Edit Starter"
         And I fill in "Name" with "Tomato salad"
         And I fill in "Description" with "Tomato and cheese"
         And I fill in "Price" with "75"
-        And I click "Update product"
+        And I click on "Update product"
         Then I see "Tomato salad"
         And I see "Tomato and cheese"
         And I see "75"
