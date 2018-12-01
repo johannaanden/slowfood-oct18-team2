@@ -4,6 +4,10 @@ Feature: Admin Log in
     In order to be able to keep the information about my restaurant up to date
     I would like to be able to log in to the system as a restaurant owner
 
+    As a restaurant owner,
+    In order to keep my customers up to date regarding my products
+    I would like to be able to make updates to my menu
+
     Background: Owner exists already
         Given the following categories exist
             | category |
@@ -26,3 +30,13 @@ Feature: Admin Log in
     Scenario: Owner can log in to the system
         When owner has logged in
         Then I see "Welcome owner!"
+
+    Scenario: Owner can uppdate update menu
+        When owner has logged in
+        And I see "Welcome owner!"
+        And I click "Edit menu"
+        And I fill in "Starter name" with "Tomato salad"
+        And I fill in "Starter description" with "Tomato and cheese"
+        And I click "Update menu"
+        Then I see "Tomato salad"
+        And I see "Tomato and cheese"
