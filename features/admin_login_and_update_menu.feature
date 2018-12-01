@@ -38,6 +38,6 @@ Feature: Admin Log in
         And I fill in "Description" with "Tomato and cheese"
         And I fill in "Price" with "75"
         And I click on "Update product"
-        Then I see "Tomato salad"
-        And I see "Tomato and cheese"
+        Then I should see "Tomato salad"
+        And I should see "Tomato and cheese"
         And I see "75"

@@ -26,5 +26,5 @@ Feature: Visitor can add to order
     Scenario: User adds a product
         Then I should see 'pizza'
         And I should see '100'
-        And I click 'Add to Cart'
+        And I click on 'Add to Cart'
         Then I should see '1 item'
