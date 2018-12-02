@@ -25,6 +25,7 @@ Given('I fill in {string} with {string}') do |element, value|
 end
 
 Given('I click on {string}') do |element|
+    binding.pry
     click_on element
 end
 
