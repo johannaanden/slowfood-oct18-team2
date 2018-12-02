@@ -14,8 +14,6 @@ Then("I should be on product page") do
 end
 
 When("I choose {string} in {string}") do |option, selection|
-    # find(:select, "product[category_id]").first(:option, "Starter").select_option
-    find(:css, "Category").find(:option, option).select_option
-        # find(:css, css_selector).find(:option, value).select_option
+    select(option, from: `product.#{selection}`)
 end
   
