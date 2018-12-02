@@ -8,6 +8,6 @@
         %p= product.price
         - if user_signed_in?  
             - if current_user.owner
-                = link_to "Edit #{product.name}", edit_product_path(product.id)
+                = link_to "Show #{product.name}", product_path(product.id)
             - else
                 = add_to_cart(product, 1, 'Add to Cart')  
