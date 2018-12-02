@@ -51,3 +51,8 @@ Feature: Admin Log in
         And I choose "Starter" in "Category"
         And I click on "Create product"
         Then I should see "Boiled pig eyes"
+    
+    Scenario: Owner can delete a product
+        Given I have logged in as owner
+        When I click on "Delete green salad"
+        Then I should not see "green salad"

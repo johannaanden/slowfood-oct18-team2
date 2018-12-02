@@ -10,5 +10,6 @@
             - if user_signed_in?  
                 - if current_user.owner
                     = link_to "Edit #{product.name}", edit_product_path(product)
+                    = link_to "Delete #{product.name}", product_path(product), method: 'delete'
                 - else
                     = add_to_cart(product, 1, 'Add to Cart')  

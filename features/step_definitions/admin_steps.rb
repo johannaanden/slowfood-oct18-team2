@@ -8,12 +8,13 @@ When("I have logged in as owner") do
   end
 
 Then("I should be on product page") do
-    # binding.pry
     expect(current_path).to eq product_path(@product)
-    # visit product_path(product)
 end
 
 When("I choose {string} in {string}") do |option, selection|
     select(option, from: `product.#{selection}`)
 end
-  
+
+Then("I should not see {string}") do |word|
+    expect(page).to have_no_content word
+end  
