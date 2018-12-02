@@ -1,2 +1,5 @@
-%h1 Products#show
-%p Find me in app/views/products/show.html.haml
+%h4= @product.name
+%p= @product.description
+%p= @product.price
+%p= @product.category
+= link_to "Edit Product", edit_product_path(@product)

@@ -34,6 +34,7 @@ Feature: Admin Log in
     Scenario: Owner can update product
         Given I have logged in as owner
         When I click on "Show green salad"
+        And I wait 1 second
         Then I should be on product page
         When I click on "Edit product"
         And I fill in "Name" with "Tomato salad"

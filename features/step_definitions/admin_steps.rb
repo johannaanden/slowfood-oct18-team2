@@ -8,8 +8,9 @@ When("I have logged in as owner") do
   end
 
 Then("I should be on product page") do
-    #expect(current_path).to eq product_path(@product)
-    visit product_path(@product.id)
+    # binding.pry
+    expect(current_path).to eq product_path(@product)
+    # visit product_path(product)
 end
 
 When("I choose {string} in {string}") do |string, string2|

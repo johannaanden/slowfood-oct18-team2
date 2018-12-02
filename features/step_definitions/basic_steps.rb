@@ -25,7 +25,11 @@ Given('I fill in {string} with {string}') do |element, value|
 end
 
 Given('I click on {string}') do |element|
-    binding.pry
+    # binding.pry
     click_on element
+    # binding.pry
 end
 
+When("I wait 1 second") do
+    sleep 1
+end
