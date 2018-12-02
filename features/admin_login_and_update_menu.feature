@@ -31,9 +31,11 @@ Feature: Admin Log in
         When I have logged in as owner
         Then I see "Welcome owner!"
 
-    Scenario: Owner can uppdate update menu
+    Scenario: Owner can update product
         Given I have logged in as owner
-        When I click on "Edit green salad"
+        When I click on "Show green salad"
+        Then I should be on product page
+        When I click on "Edit product"
         And I fill in "Name" with "Tomato salad"
         And I fill in "Description" with "Tomato and cheese"
         And I fill in "Price" with "75"
@@ -41,3 +43,13 @@ Feature: Admin Log in
         Then I should see "Tomato salad"
         And I should see "Tomato and cheese"
         And I see "75"
+
+    Scenario: Owner can create a product
+        Given I have logged in as owner
+        When I click on "Add product"
+        And I fill in "Name" with "Boiled pig eyes"
+        And I fill in "Description" with "raw pig eyes, but boiled"
+        And I fill in "Price" with "249"
+        And I choose "Starter" in "category"
+        And I click on "Create product"
+        Then I should see "Boiled pig eyes"
