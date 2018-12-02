@@ -1,14 +1,8 @@
 - if user_signed_in?  
   - if current_user.owner
-    %h1 Welcome owner!
+    %h1 Welcome owner!  
   - else
-    %h1 Today's Menu
+    %h2== Welcome #{current_user.email}!
 
-- @categories.each do |category|
-  %p= category.category
-  %div{id: dom_id(category)}
-    - category.products.each do |product|
-      %p= product.name
-      %p= product.description
-      %p= product.price
-      = add_to_cart(product, 1, 'Add to Cart') if user_signed_in?
+= render partial: 'partials/menu'
+

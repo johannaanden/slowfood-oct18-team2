@@ -13,6 +13,6 @@ When("I have logged in") do
         Given I visit login page 
         And I fill in "Email" with 'Don@trump.com'
         And I fill in "Password" with 'maga2020'
-        And I click 'Log in'
+        And I click on 'Log in'
     }
   end

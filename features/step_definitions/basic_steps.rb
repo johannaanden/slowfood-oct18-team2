@@ -24,7 +24,7 @@ Given('I fill in {string} with {string}') do |element, value|
     fill_in element, with: value
 end
 
-Given('I click {string}') do |element|
+Given('I click on {string}') do |element|
     click_on element
 end
 

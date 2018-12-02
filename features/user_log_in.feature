@@ -17,9 +17,9 @@ Feature: User can log in and out
     Scenario: User can log in [Happy-path]
         When I fill in 'Email' with 'Don@trump.com'
         And I fill in 'Password' with 'maga2020'
-        And I click 'Log in'
+        And I click on 'Log in'
         Then I see 'Signed in successfully.'
 
     Scenario: User fills in the login form incorrectly [Sad-path]
-        When I click 'Log in'
+        When I click on 'Log in'
         Then I see 'Invalid Email or password.'

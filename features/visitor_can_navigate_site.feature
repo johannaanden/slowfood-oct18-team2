@@ -16,10 +16,10 @@ Feature: User can navigate the site
 
     Scenario: User has logged in
         Given I visit the site
-        And I click 'Login' 
+        And I click on 'Login' 
         Then I fill in 'Email' with 'Don@trump.com'
         And I fill in 'Password' with 'maga2020'
-        And I click 'Log in'
+        And I click on 'Log in'
         Then I should see 'Log out'
 
 
