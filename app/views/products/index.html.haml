@@ -1,6 +1,7 @@
 - if user_signed_in?  
   - if current_user.owner
     %h1 Welcome owner!  
+    = link_to 'Create Product', new_product_path
   - else
     %h2 Welcome #{current_user.email}!
 

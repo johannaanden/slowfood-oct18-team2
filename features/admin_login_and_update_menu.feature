@@ -47,7 +47,7 @@ Feature: Admin Log in
 
     Scenario: Owner can create a product
         Given I have logged in as owner
-        When I click on "Add product"
+        When I click on "Create Product"
         And I fill in "Name" with "Boiled pig eyes"
         And I fill in "Description" with "raw pig eyes, but boiled"
         And I fill in "Price" with "249"
