@@ -5,4 +5,6 @@
   = form.text_area :description
   %p= form.label :price
   = form.text_field :price
-  %p= form.submit "Create product "
+  %p= form.label :category
+  .Category= form.collection_select :category_id, Category.all, :id, :category
+  %p= form.submit "Create product"

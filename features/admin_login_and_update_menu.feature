@@ -51,6 +51,6 @@ Feature: Admin Log in
         And I fill in "Name" with "Boiled pig eyes"
         And I fill in "Description" with "raw pig eyes, but boiled"
         And I fill in "Price" with "249"
-        And I choose "Starter" in "category"
+        And I choose "Starter" in "Category"
         And I click on "Create product"
         Then I should see "Boiled pig eyes"

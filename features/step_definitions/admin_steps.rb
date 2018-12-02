@@ -13,7 +13,9 @@ Then("I should be on product page") do
     # visit product_path(product)
 end
 
-When("I choose {string} in {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+When("I choose {string} in {string}") do |option, selection|
+    # find(:select, "product[category_id]").first(:option, "Starter").select_option
+    find(:css, "Category").find(:option, option).select_option
+        # find(:css, css_selector).find(:option, value).select_option
 end
   
