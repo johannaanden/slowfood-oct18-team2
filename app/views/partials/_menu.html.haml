@@ -1,0 +1,15 @@
+%h1 Today's Menu
+- @categories.each do |category|
+    %h2= category.category
+    %div{id: dom_id(category)}
+    - @products.each do |product|
+        - if product.category == category
+            %h4= product.name
+            %p= product.description
+            %p= product.price
+            - if user_signed_in?  
+                - if current_user.owner
+                    = link_to "Edit #{product.name}", edit_product_path(product)
+                    = link_to "Delete #{product.name}", product_path(product), method: 'delete'
+                - else
+                    = add_to_cart(product, 1, 'Add to Cart')  

@@ -24,7 +24,12 @@ Given('I fill in {string} with {string}') do |element, value|
     fill_in element, with: value
 end
 
-Given('I click {string}') do |element|
+Given('I click on {string}') do |element|
+    # binding.pry
     click_on element
+    # binding.pry
 end
 
+When("I wait 1 second") do
+    sleep 1
+end
